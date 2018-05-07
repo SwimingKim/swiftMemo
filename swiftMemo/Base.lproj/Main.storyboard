@@ -14,7 +14,7 @@
         <!--메모-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swiftMemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ListViewController" customModule="swiftMemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,28 +175,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="utt-4p-oHW">
-                                <rect key="frame" x="16" y="89" width="343" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="제목을 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="utt-4p-oHW">
+                                <rect key="frame" x="16" y="74" width="343" height="22"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fvN-BK-uXy">
-                                <rect key="frame" x="16" y="137" width="343" height="510"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="10" y="104" width="375" height="543"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fvN-BK-uXy" firstAttribute="top" secondItem="utt-4p-oHW" secondAttribute="bottom" constant="18" id="H2q-Ms-8gm"/>
+                            <constraint firstItem="uYK-2J-2i4" firstAttribute="bottom" secondItem="fvN-BK-uXy" secondAttribute="bottom" constant="20" id="85d-7g-cvz"/>
                             <constraint firstItem="uYK-2J-2i4" firstAttribute="trailing" secondItem="utt-4p-oHW" secondAttribute="trailing" constant="16" id="K9Z-Rk-i8A"/>
                             <constraint firstItem="utt-4p-oHW" firstAttribute="leading" secondItem="uYK-2J-2i4" secondAttribute="leading" constant="16" id="Lzr-ya-dnp"/>
-                            <constraint firstItem="uYK-2J-2i4" firstAttribute="trailing" secondItem="fvN-BK-uXy" secondAttribute="trailing" constant="16" id="cGD-QM-IeM"/>
-                            <constraint firstItem="utt-4p-oHW" firstAttribute="top" secondItem="uYK-2J-2i4" secondAttribute="top" constant="25" id="n9p-zg-uPb"/>
-                            <constraint firstItem="fvN-BK-uXy" firstAttribute="leading" secondItem="uYK-2J-2i4" secondAttribute="leading" constant="16" id="p66-BD-JhR"/>
-                            <constraint firstItem="uYK-2J-2i4" firstAttribute="bottom" secondItem="fvN-BK-uXy" secondAttribute="bottom" constant="20" id="u3H-dq-wne"/>
+                            <constraint firstItem="fvN-BK-uXy" firstAttribute="leading" secondItem="uYK-2J-2i4" secondAttribute="leading" constant="10" id="fTY-4H-6pi"/>
+                            <constraint firstItem="fvN-BK-uXy" firstAttribute="top" secondItem="utt-4p-oHW" secondAttribute="bottom" constant="8" id="inX-yM-JIj"/>
+                            <constraint firstItem="utt-4p-oHW" firstAttribute="top" secondItem="uYK-2J-2i4" secondAttribute="top" constant="10" id="n9p-zg-uPb"/>
+                            <constraint firstItem="fvN-BK-uXy" firstAttribute="trailing" secondItem="uYK-2J-2i4" secondAttribute="trailing" constant="10" id="xHr-Rw-Wkk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uYK-2J-2i4"/>
                     </view>
@@ -213,14 +215,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bottomConstraint" destination="u3H-dq-wne" id="y0f-XA-Y1i"/>
+                        <outlet property="bottomConstraint" destination="85d-7g-cvz" id="GtI-FU-OWK"/>
                         <outlet property="contentField" destination="fvN-BK-uXy" id="3XK-RF-u3M"/>
                         <outlet property="titleField" destination="utt-4p-oHW" id="vmo-d8-oo4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wej-zj-sef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2679" y="-32"/>
+            <point key="canvasLocation" x="2677.5999999999999" y="-32.833583208395808"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QVo-oO-u0O">

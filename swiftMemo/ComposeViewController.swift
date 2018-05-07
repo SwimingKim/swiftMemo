@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ComposeViewController: UIViewController {
+class ComposeViewController: ViewController {
     
     var memo: MemoEntity?
 

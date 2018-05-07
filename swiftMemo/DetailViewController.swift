@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-class DetailViewController: UIViewController {
+class DetailViewController: ViewController {
     
     var memo: MemoEntity?
 
