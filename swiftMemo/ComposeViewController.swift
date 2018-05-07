@@ -9,31 +9,9 @@
 import UIKit
 import CoreData
 
-
-extension UIViewController {
-    
-    var context: NSManagedObjectContext {
-        
-        guard let ad = UIApplication.shared.delegate as? AppDelegate else {
-            fatalError()
-        }
-        
-        return ad.persistentContainer.viewContext
-    }
-    
-    func show(message: String) {
-        let alert = UIAlertController(title: "알림", message: message, preferredStyle: .alert)
-        let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
-        alert.addAction(ok)
-        
-        present(alert, animated: true, completion: nil)
-    }
-    
-}
-
-
 class ComposeViewController: UIViewController {
     
+    var memo: MemoEntity?
 
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var contentField: UITextView!
@@ -53,10 +31,15 @@ class ComposeViewController: UIViewController {
             return
         }
         
-        if let newMemo = NSEntityDescription.insertNewObject(forEntityName: "Memo", into: context) as? MemoEntity {
-            newMemo.title = title
-            newMemo.content = content
-            newMemo.insertDate = Date()
+        if let editTarget = memo {
+            editTarget.title = title
+            editTarget.content = content
+        } else {
+            if let newMemo = NSEntityDescription.insertNewObject(forEntityName: "Memo", into: context) as? MemoEntity {
+                newMemo.title = title
+                newMemo.content = content
+                newMemo.insertDate = Date()
+            }
         }
         
         do {
@@ -89,6 +72,15 @@ class ComposeViewController: UIViewController {
             UIView.animate(withDuration: 0.3, animations: {
                 self?.view.layoutIfNeeded()
             })
+        }
+        
+        if let editTarget = memo {
+            titleField.text = editTarget.title
+            contentField.text = editTarget.content
+            
+            title = "편집하기"
+        } else {
+            title = "새 메모"
         }
         
     }

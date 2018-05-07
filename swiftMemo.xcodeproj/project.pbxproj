@@ -15,6 +15,7 @@
 		2D0EE0D320A08B4100C4A2FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D0EE0D120A08B4100C4A2FB /* LaunchScreen.storyboard */; };
 		2D0EE0DB20A08CC300C4A2FB /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0EE0DA20A08CC300C4A2FB /* ComposeViewController.swift */; };
 		2D0EE0DD20A091AB00C4A2FB /* MemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0EE0DC20A091AB00C4A2FB /* MemoTableViewCell.swift */; };
+		2D228F3920A0990800568A59 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D228F3820A0990800568A59 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2D0EE0D420A08B4100C4A2FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D0EE0DA20A08CC300C4A2FB /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		2D0EE0DC20A091AB00C4A2FB /* MemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewCell.swift; sourceTree = "<group>"; };
+		2D228F3820A0990800568A59 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				2D0EE0C920A08B4100C4A2FB /* Main.storyboard */,
 				2D0EE0CF20A08B4100C4A2FB /* Assets.xcassets */,
 				2D0EE0DC20A091AB00C4A2FB /* MemoTableViewCell.swift */,
+				2D228F3820A0990800568A59 /* DetailViewController.swift */,
 				2D0EE0D120A08B4100C4A2FB /* LaunchScreen.storyboard */,
 				2D0EE0DA20A08CC300C4A2FB /* ComposeViewController.swift */,
 				2D0EE0D420A08B4100C4A2FB /* Info.plist */,
@@ -147,6 +150,7 @@
 				2D0EE0DD20A091AB00C4A2FB /* MemoTableViewCell.swift in Sources */,
 				2D0EE0C820A08B4100C4A2FB /* ViewController.swift in Sources */,
 				2D0EE0C620A08B4100C4A2FB /* AppDelegate.swift in Sources */,
+				2D228F3920A0990800568A59 /* DetailViewController.swift in Sources */,
 				2D0EE0CE20A08B4100C4A2FB /* swiftMemo.xcdatamodeld in Sources */,
 				2D0EE0DB20A08CC300C4A2FB /* ComposeViewController.swift in Sources */,
 			);
