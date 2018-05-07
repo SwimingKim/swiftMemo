@@ -80,8 +80,8 @@ extension ListViewController: UITableViewDataSource {
         let target = list[indexPath.row]
         cell.memoTitleLabel.text = target.title
         
-        if let content = target.content, content.count > 20 {
-            let to = content.index(content.startIndex, offsetBy: 20)
+        if let content = target.content, content.count > 50 {
+            let to = content.index(content.startIndex, offsetBy: 50)
             cell.memoContentLabel.text = "\(content[..<to])..."
         } else {
             cell.memoContentLabel.text = target.content
